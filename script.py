@@ -1,46 +1,58 @@
-# This function adds two numbers
-def add (x,y):
-    return 
-# This function subtracts two numbers
-def subtract (x,y):
-    return 
-# This function multiplies two numbers
-def multiply (x,y):
-    return x * y
-# This function divides two numbers
-def divide (x,y):
-    return x / y
+// This function adds two numbers
+function add(x, y) {
+  return;
+}
 
-print("Select any operation.")
-print("1.Add")
-print("2.Subtract") 
-print("3.Multiply")
-print("4.Divide")
+// This function subtracts two numbers
+function subtract(x, y) {
+  return;
+}
 
-while True:
-   # take input from the user
-   choice = input("Enter choice(1/2/3/4):")
-   # check if choice is one of the four options
-   if choice in ('1','2','3','4'):
-    try:
-      num1 = float(input("Enter first number:"))
-      num2 = float(input("Enter second number:")) 
-    except ValueError:
-      print("Invalid put, please enter a number you dumbass.")
-      continue
-    if choice == '1':
-       print("I don't know how to add.")
-    elif choice == '2':
-       print("I've never been to school, actually.")
-    elif choice == '3':
-       print("Now you're getting on my nerves.")
-    elif choice == '4':
-       print("Stop playing with me just use a calculator.")
+// This function multiplies two numbers
+function multiply(x, y) {
+  return x * y;
+}
 
-    # check if user wants another calculation
-    # stop the loop if answer is no
-    next_calculation = input ("Do you want me to do another one?")
-    if next_calculation == "no":
-      break
-else:
-    print("Ok, goodbye bully.") 
+// This function divides two numbers
+function divide(x, y) {
+  return x / y;
+}
+
+console.log("Select any operation.");
+console.log("1.Add");
+console.log("2.Subtract");
+console.log("3.Multiply");
+console.log("4.Divide");
+
+while (true) {
+  // take input from the user
+  let choice = prompt("Enter choice(1/2/3/4):");
+  // check if choice is one of the four options
+  if (choice === '1' || choice === '2' || choice === '3' || choice === '4') {
+    try {
+      let num1 = parseFloat(prompt("Enter first number:"));
+      let num2 = parseFloat(prompt("Enter second number:"));
+    } catch (e) {
+      console.log("Invalid input, please enter a number.");
+      continue;
+    }
+    if (choice === '1') {
+      console.log("I don't know how to add.");
+    } else if (choice === '2') {
+      console.log("I've never been to school, actually.");
+    } else if (choice === '3') {
+      console.log("Now you're getting on my nerves.");
+    } else if (choice === '4') {
+      console.log("Stop playing with me just use a calculator.");
+    }
+
+    // check if user wants another calculation
+    // stop the loop if answer is no
+    let next_calculation = prompt("Do you want me to do another one?");
+    if (next_calculation.toLowerCase() === "no") {
+      break;
+    }
+  } else {
+    console.log("Ok, goodbye bully.");
+  }
+}
